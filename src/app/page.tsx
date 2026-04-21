@@ -6,6 +6,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
           <span className="font-bold text-lg">Alex Horton</span>
           <div className="flex gap-6 text-sm text-[#a3a3a3]">
+            <a href="#agents" className="hover:text-white transition-colors">Agents</a>
             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
             <a href="#skills" className="hover:text-white transition-colors">Skills</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
@@ -21,14 +22,13 @@ export default function Home() {
               Open to new opportunities
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              I build production software<br />
+              I build production AI systems<br />
               <span className="text-[#a3a3a3]">from zero to one.</span>
             </h1>
             <p className="text-lg text-[#a3a3a3] max-w-2xl mb-8 leading-relaxed">
-              Full-stack engineer with ML background. I&apos;ve shipped three production platforms
-              independently in energy, fintech, and real estate. Interdisciplinary background
-              in engineering design from Cal Poly. Looking for early-stage teams building
-              technology with a real-world moat.
+              Full-stack engineer with ML background. I design and operate autonomous agent infrastructure
+              — persistent terminal workers coordinated over shared Obsidian context, managed via
+              kanban across live products. Solo founder, 3 production platforms, Anthropic Claude Code certified (2026).
             </p>
             <div className="flex gap-4">
               <a
@@ -51,6 +51,91 @@ export default function Home() {
               alt="Alex Horton"
               className="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl object-cover object-top border border-[#262626]"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Agent Infrastructure */}
+      <section id="agents" className="max-w-4xl mx-auto px-6 py-20">
+        <h2 className="text-2xl font-bold mb-2">Agent Infrastructure</h2>
+        <p className="text-[#a3a3a3] mb-10">A persistent multi-agent system running 24/7 across my products.</p>
+
+        {/* Architecture diagram */}
+        <div className="bg-[#0d0d0d] border border-[#262626] rounded-xl p-6 mb-8 font-mono text-sm overflow-x-auto">
+          <p className="text-[#666] mb-3 font-sans text-xs uppercase tracking-widest">Architecture</p>
+          <pre className="text-[#a3a3a3] leading-relaxed">{`Telegram
+    │  Python bridge (routes messages → sessions)
+    ▼
+┌───────────────────────────────────────────────┐
+│            Persistent Terminal Workers         │
+│  tmux session: assistant                      │
+│  tmux session: bml-ceo   ← bitcoinml          │
+│  tmux session: scout-ceo ← energyscout        │
+└─────────────────┬─────────────────────────────┘
+                  │  read / write markdown
+                  ▼
+┌───────────────────────────────────────────────┐
+│         Obsidian Vault  (shared memory)        │
+│  inbox/  ← tasks arrive here                  │
+│  outbox/ ← agent responses posted here        │
+│  knowledge/ ← persistent cross-agent context  │
+└─────────────────┬─────────────────────────────┘
+                  │  task sync (5s poll)
+                  ▼
+            Cline Kanban
+     backlog → in_progress → review`}</pre>
+        </div>
+
+        {/* How it works */}
+        <div className="grid sm:grid-cols-2 gap-6 mb-8">
+          <div className="bg-[#141414] border border-[#262626] rounded-xl p-6">
+            <h3 className="font-semibold mb-3 text-[#e5e5e5]">Telegram → Terminal Bridge</h3>
+            <p className="text-[#a3a3a3] text-sm leading-relaxed">
+              A Python bridge listens to Telegram and routes messages to the right persistent tmux session.
+              Each session is a named worker tied to a specific product — Bitcoin ML, EnergyScout, or general assistant.
+              Workers stay alive across reboots; conversations persist in context.
+            </p>
+          </div>
+
+          <div className="bg-[#141414] border border-[#262626] rounded-xl p-6">
+            <h3 className="font-semibold mb-3 text-[#e5e5e5]">Obsidian In / Out Methodology</h3>
+            <p className="text-[#a3a3a3] text-sm leading-relaxed">
+              Agents communicate through markdown files in an Obsidian vault. Tasks drop into{" "}
+              <code className="text-[#22c55e] text-xs">inbox/</code>, agents process and write results to{" "}
+              <code className="text-[#22c55e] text-xs">outbox/</code>.
+              Shared <code className="text-[#22c55e] text-xs">knowledge/</code> gives every agent access to the same
+              persistent context — no API calls between agents, just filesystem reads.
+            </p>
+          </div>
+
+          <div className="bg-[#141414] border border-[#262626] rounded-xl p-6">
+            <h3 className="font-semibold mb-3 text-[#e5e5e5]">Kanban Across Products</h3>
+            <p className="text-[#a3a3a3] text-sm leading-relaxed">
+              A Cline kanban board coordinates tasks across all three live sites —
+              bitcoinmachinelearning.com, energyscout.org, and propfi.live.
+              Tasks move backlog → in_progress → review as agents work them.
+              Syncs bidirectionally every 5 seconds between kanban and vault.
+            </p>
+          </div>
+
+          <div className="bg-[#141414] border border-[#262626] rounded-xl p-6">
+            <h3 className="font-semibold mb-3 text-[#e5e5e5]">The End Goal</h3>
+            <p className="text-[#a3a3a3] text-sm leading-relaxed">
+              Each product eventually runs its own autonomous employee: a persistent agent with domain context,
+              a task queue, and a communication channel. The loop is: task arrives → agent works it →
+              result posted → human reviews or approves. The human stays in the loop at review,
+              everything else runs on its own.
+            </p>
+          </div>
+        </div>
+
+        {/* Stack tags */}
+        <div className="bg-[#141414] border border-[#262626] rounded-xl p-6">
+          <p className="text-xs text-[#666] uppercase tracking-widest mb-3">Stack</p>
+          <div className="flex flex-wrap gap-2">
+            {["Python", "Telegram Bot API", "tmux", "Claude API", "Obsidian", "Markdown", "Cline Kanban", "OpenRouter", "Claude Code", "FastAPI"].map((t) => (
+              <span key={t} className="text-xs px-2 py-1 bg-[#1a1a1a] text-[#a3a3a3] rounded border border-[#262626]">{t}</span>
+            ))}
           </div>
         </div>
       </section>
