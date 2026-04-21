@@ -28,7 +28,7 @@ export default function Home() {
             <p className="text-lg text-[#a3a3a3] max-w-2xl mb-8 leading-relaxed">
               Full-stack engineer with ML background. I design and operate autonomous agent infrastructure
               — persistent terminal workers coordinated over shared Obsidian context, managed via
-              kanban across live products. Solo founder, 3 production platforms, Anthropic Claude Code certified (2026).
+              kanban across live products. Solo founder, 3 production platforms, MIT and Stanford trained in applied AI.
             </p>
             <div className="flex gap-4">
               <a
@@ -137,6 +137,15 @@ export default function Home() {
               <span key={t} className="text-xs px-2 py-1 bg-[#1a1a1a] text-[#a3a3a3] rounded border border-[#262626]">{t}</span>
             ))}
           </div>
+        </div>
+
+        <div className="mt-6">
+          <a
+            href="/agents"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#22c55e]/10 border border-[#22c55e]/30 text-[#22c55e] font-medium rounded-lg hover:bg-[#22c55e]/20 transition-colors"
+          >
+            See the full agent system demo →
+          </a>
         </div>
       </section>
 
