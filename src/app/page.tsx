@@ -28,7 +28,7 @@ export default function Home() {
             <p className="text-lg text-[#a3a3a3] max-w-2xl mb-8 leading-relaxed">
               Full-stack engineer with ML background. I design and operate autonomous agent infrastructure
               — persistent terminal workers coordinated over shared Obsidian context, managed via
-              kanban across live products. Solo founder, 3 production platforms, MIT and Stanford trained in applied AI.
+              kanban across live products. Solo founder, 3 production platforms, Anthropic, MIT, and Stanford coursework in applied AI and Claude.
             </p>
             <div className="flex gap-4">
               <a
