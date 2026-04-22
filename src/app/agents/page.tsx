@@ -77,17 +77,19 @@ export default function AgentsPage() {
                 Workers pull tasks, update status, post results. I stay in the loop at review.
               </p>
             </div>
-            <div className="rounded-xl overflow-hidden border border-[#262626]">
-              <div className="bg-[#141414] px-3 py-1.5 flex items-center gap-2 border-b border-[#262626]">
-                <span className="text-xs text-[#666]">Cline Kanban — backlog → in progress → review</span>
-              </div>
-              <img
-                src="/screenshots/cline-kanban.png"
-                alt="Cline kanban board with tasks across columns"
-                className="w-full"
-              />
-            </div>
           </div>
+        </div>
+
+        {/* Cline kanban — full width for readability */}
+        <div className="mt-6 rounded-xl overflow-hidden border border-[#262626]">
+          <div className="bg-[#141414] px-3 py-1.5 flex items-center gap-2 border-b border-[#262626]">
+            <span className="text-xs text-[#666]">Cline Kanban — backlog → in progress → review</span>
+          </div>
+          <img
+            src="/screenshots/cline-kanban.png"
+            alt="Cline kanban board with tasks across columns"
+            className="w-full"
+          />
         </div>
       </section>
 
@@ -151,7 +153,7 @@ export default function AgentsPage() {
               <img
                 src="/screenshots/openclaw-kanban.png"
                 alt="OpenClaw kanban board"
-                className="w-full"
+                className="w-full min-h-[320px] object-cover object-top"
               />
             </div>
           </div>
