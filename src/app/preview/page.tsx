@@ -8,7 +8,7 @@ export default function PreviewHome() {
         <div className="max-w-4xl mx-auto px-6 py-2 flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center justify-between">
           <span className="text-[#22c55e]">
             Preview — recalibrated copy (v1).{" "}
-            <span className="text-[#a3a3a3]">Open questions are flagged inline.</span>
+            <span className="text-[#a3a3a3]">Open questions resolved.</span>
           </span>
           <Link
             href="/"
@@ -46,9 +46,9 @@ export default function PreviewHome() {
               </span>
             </h1>
             <p className="text-lg text-[#a3a3a3] max-w-2xl mb-8 leading-relaxed">
-              Engineering design (Cal Poly) + applied AI coursework (MIT, Stanford).
-              Comfortable across Python, TypeScript, FastAPI, Postgres, and React —
-              building products where software meets the real world.
+              Engineering design (Cal Poly) + applied AI coursework (MIT, Stanford,
+              Anthropic via Skilljar). Comfortable across Python, TypeScript, FastAPI,
+              Postgres, and React — building products where software meets the real world.
             </p>
             <div className="flex gap-4">
               <a
@@ -85,8 +85,9 @@ export default function PreviewHome() {
           </p>
           <p>
             My background is in engineering design at Cal Poly San Luis Obispo
-            (sustainability focus), with applied AI coursework from MIT and Stanford.
-            I work across Python, TypeScript, FastAPI, Postgres/Supabase, and React/Next.js.
+            (sustainability focus), with applied AI coursework from MIT, Stanford, and
+            Anthropic (via Skilljar). I work across Python, TypeScript, FastAPI,
+            Postgres/Supabase, and React/Next.js.
             I&apos;m strongest at the product and applied-ML layers, lighter on deep platform/ops
             specialization — I own infrastructure for what I ship, but I&apos;m not pitching
             myself as a senior platform engineer.
@@ -108,11 +109,7 @@ export default function PreviewHome() {
       {/* Projects */}
       <section id="projects" className="max-w-4xl mx-auto px-6 py-16">
         <h2 className="text-2xl font-bold mb-2">Projects</h2>
-        <p className="text-[#a3a3a3] mb-2">Live side projects I&apos;ve built solo, end to end.</p>
-        <p className="text-xs text-[#666] mb-10 italic">
-          Open question for review: any of these have a real metric (users, traffic, revenue)
-          worth leading with instead of &quot;side project&quot;?
-        </p>
+        <p className="text-[#a3a3a3] mb-10">Live side projects I&apos;ve built solo, end to end.</p>
 
         <div className="grid gap-6">
           {/* Energy Scout */}
@@ -345,11 +342,6 @@ export default function PreviewHome() {
           </div>
         </div>
 
-        <p className="text-xs text-[#666] mt-6 italic">
-          Open question for review: the &quot;Anthropic&quot; line from the current site is
-          removed by default. If the relationship is &quot;I use Claude heavily in my dev loop,&quot;
-          we can phrase it that way; otherwise leave it off.
-        </p>
       </section>
 
       {/* Contact / CTA */}
@@ -402,7 +394,6 @@ export default function PreviewHome() {
       <footer className="max-w-4xl mx-auto px-6 py-8 border-t border-[#262626]">
         <p className="text-sm text-[#666]">
           Alex Horton, 2026 · also: Google UX certificate
-          <span className="text-[#444]"> (open question: keep at top level or here?)</span>
         </p>
       </footer>
     </div>
