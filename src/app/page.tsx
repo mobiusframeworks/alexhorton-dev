@@ -1,8 +1,24 @@
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#e5e5e5]">
+      {/* Compare banner */}
+      <div className="w-full bg-[#1a1a1a] border-b border-[#262626] text-sm">
+        <div className="max-w-4xl mx-auto px-6 py-2 flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center justify-between">
+          <span className="text-[#a3a3a3]">
+            Current site (live).{" "}
+            <span className="text-[#666]">Recalibrated copy is in preview.</span>
+          </span>
+          <a
+            href="/preview"
+            className="text-[#22c55e] underline underline-offset-2 hover:text-white transition-colors whitespace-nowrap"
+          >
+            View redesigned preview →
+          </a>
+        </div>
+      </div>
+
       {/* Nav */}
-      <nav className="fixed top-0 w-full bg-[#0a0a0a]/80 backdrop-blur-md border-b border-[#262626] z-50">
+      <nav className="sticky top-0 w-full bg-[#0a0a0a]/80 backdrop-blur-md border-b border-[#262626] z-50">
         <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
           <span className="font-bold text-lg">Alex Horton</span>
           <div className="flex gap-6 text-sm text-[#a3a3a3]">
@@ -15,7 +31,7 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-4xl mx-auto px-6 pt-32 pb-20">
+      <section className="max-w-4xl mx-auto px-6 pt-20 pb-20">
         <div className="flex flex-col sm:flex-row items-start gap-10">
           <div className="flex-1">
             <div className="inline-block px-3 py-1 mb-6 text-xs font-medium text-[#22c55e] bg-[#22c55e]/10 rounded-full border border-[#22c55e]/20">
