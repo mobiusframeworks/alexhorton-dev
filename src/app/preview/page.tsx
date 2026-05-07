@@ -46,9 +46,10 @@ export default function PreviewHome() {
               </span>
             </h1>
             <p className="text-lg text-[#a3a3a3] max-w-2xl mb-8 leading-relaxed">
-              Engineering design (Cal Poly) + applied AI coursework (MIT, Stanford,
-              Anthropic via Skilljar). Comfortable across Python, TypeScript, FastAPI,
-              Postgres, and React — building products where software meets the real world.
+              LAES at Cal Poly (interdisciplinary design thinking — Stanford d.school model) +
+              applied AI coursework (MIT, Stanford, Anthropic via Skilljar). Comfortable
+              across Python, TypeScript, FastAPI, Postgres, and React — building products
+              where software meets the real world.
             </p>
             <div className="flex gap-4">
               <a
@@ -84,8 +85,11 @@ export default function PreviewHome() {
             users can touch than optimize a single layer of the stack.
           </p>
           <p>
-            My background is in engineering design at Cal Poly San Luis Obispo
-            (sustainability focus), with applied AI coursework from MIT, Stanford, and
+            My background is in the LAES program at Cal Poly San Luis Obispo —
+            Liberal Arts and Engineering Studies, an interdisciplinary program modelled
+            after the Stanford d.school. Group projects, a five-step design process
+            (Empathize, Define, Ideate, Prototype, Test), and a focus on solving pressing
+            global problems. Applied AI coursework since then from MIT, Stanford, and
             Anthropic (via Skilljar). I work across Python, TypeScript, FastAPI,
             Postgres/Supabase, and React/Next.js.
             I&apos;m strongest at the product and applied-ML layers, lighter on deep platform/ops
