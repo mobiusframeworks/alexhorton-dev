@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Alex Horton | Full-Stack Engineer & ML Builder",
-  description: "Full-stack engineer with ML background. Shipped production platforms in energy, fintech, and real estate.",
+  title: "Alex Horton | Product Engineer",
+  description: "Product engineer who ships full-stack products end-to-end — with AI agents as force multipliers.",
   openGraph: {
-    title: "Alex Horton | Full-Stack Engineer & ML Builder",
-    description: "Full-stack engineer with ML background. Shipped production platforms in energy, fintech, and real estate.",
+    title: "Alex Horton | Product Engineer",
+    description: "Product engineer who ships full-stack products end-to-end — with AI agents as force multipliers.",
     url: "https://alexhorton.dev",
     type: "website",
   },
